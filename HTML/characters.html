@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCU Characters</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+
+    <style>
+        body {
+            background-attachment: fixed;
+            background-image: linear-gradient(red, rgba(139, 9, 93, 0.879), rgb(0, 0, 0));
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 10px 20px;
+            color: #fff;
+        }
+
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar-menu li {
+            margin-left: 20px;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .carousel-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 30px;
+        }
+
+        .carousel-container h2 {
+            color: #fff;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .carousel {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .carousel-item img:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .carousel-info {
+            margin-top: 10px;
+        }
+
+        .carousel-info h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .carousel-info p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+        }
+
+        .left-btn {
+            left: 10px;
+        }
+
+        .right-btn {
+            right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: block;
+                text-align: center;
+            }
+
+            .navbar-menu li {
+                margin: 10px 0;
+            }
+
+            .carousel-info h3 {
+                font-size: 20px;
+            }
+
+            .carousel-info p {
+                font-size: 14px;
+            }
+
+            .carousel-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-info h3 {
+                font-size: 18px;
+            }
+
+            .carousel-info p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">Marvel</div>
+        <ul class="navbar-menu">
+            <li><a href="/HTML/index.html">Home</a></li>
+            <li><a href="/HTML/characters.html">Characters</a></li>
+            <li><a href="/HTML/movies.html">Movies</a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Heroes f -->
+    <section class="carousel-container">
+        <h2>Heroes</h2>
+        <div class="carousel" id="hero-carousel">
+            <button class="carousel-btn left-btn" onclick="moveCarousel('hero-carousel', -1)">&#10094;</button>
+            <div class="carousel-slides">
+
+                <div class="carousel-item">
+                    <img src="/images/captain america.jpg" alt="Captain America">
+                    <div class="carousel-info">
+                        <h3>Captain America</h3>
+                        <p>Super-soldier with a vibranium shield, leading the Avengers with unwavering bravery and
+                            justice.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/iron man.jpg" alt="Iron Man">
+                    <div class="carousel-info">
+                        <h3>Iron Man</h3>
+                        <p> Genius billionaire in a high-tech suit of armor, known for his innovation and heroic tech
+                            prowess.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/hulk.webp" alt="Hulk">
+                    <div class="carousel-info">
+                        <h3>Hulk</h3>
+                        <p>Scientist with incredible strength and green skin, transforming into a powerful giant when
+                            enraged.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/spiderman.jpg" alt="Spiderman">
+                    <div class="carousel-info">
+                        <h3>Spiderman</h3>
+                        <p>Teen superhero with spider-like abilities and a web-slinging suit, balancing heroics and high
+                            school life.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/thor.jpg" alt="Thor">
+                    <div class="carousel-info">
+                        <h3>Thor</h3>
+                        <p>Norse god of thunder wielding the enchanted hammer Mjölnir, protector of Asgard and Earth.
+                        </p>
+                    </div>
+                </div>
+                <!-- Add more hero items as needed -->
+            </div>
+            <button class="carousel-btn right-btn" onclick="moveCarousel('hero-carousel', 1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Villains Carousel -->
+    <section class="carousel-container" id="villain">
+        <h2>Villains</h2>
+        <div class="carousel" id="villain-carousel">
+            <button class="carousel-btn left-btn" onclick="moveCarousel('villain-carousel', -1)">&#10094;</button>
+            <div class="carousel-slides">
+
+                <div class="carousel-item">
+                    <img src="/images/thanos.jpg" alt="Thanos">
+                    <div class="carousel-info">
+                        <h3>Thanos</h3>
+                        <p>Mad Titan with immense power, seeking to balance the universe with the Infinity Stones.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/abonimation.jpg" alt="abonimation">
+                    <div class="carousel-info">
+                        <h3>Abonimation</h3>
+                        <p>Hulk’s monstrous adversary, possessing similar powers but driven by malevolence.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/Ebony.jpg" alt="Ebony">
+                    <div class="carousel-info">
+                        <h3>Ebony</h3>
+                        <p>Charismatic and manipulative alien, loyal to Thanos, with telekinetic powers and a knack for
+                            persuasion.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/dr. doom.jpg" alt="dr. doom">
+                    <div class="carousel-info">
+                        <h3>Doctor Doom</h3>
+                        <p>Genius inventor and sorcerer with a metal suit and a relentless quest for global domination.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/kang.jpg" alt="kang">
+                    <div class="carousel-info">
+                        <h3>kang the Conquerer</h3>
+                        <p>Time-traveling warlord with advanced technology, known for his complex and formidable
+                            history.</p>
+                    </div>
+                </div>
+                <!-- Add more villain items as needed -->
+            </div>
+            <button class="carousel-btn right-btn" onclick="moveCarousel('villain-carousel', 1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Other Characters Carousel -->
+    <section class="carousel-container" id="other">
+        <h2>Other Characters</h2>
+        <div class="carousel" id="other-carousel">
+            <button class="carousel-btn left-btn" onclick="moveCarousel('other-carousel', -1)">&#10094;</button>
+            <div class="carousel-slides">
+
+                <div class="carousel-item">
+                    <img src="/images/nick fury.jpg" alt="nick fury">
+                    <div class="carousel-info">
+                        <h3>Nick Fury</h3>
+                        <p>Director of S.H.I.E.L.D., orchestrating global defense with strategic genius and a network of
+                            heroes.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/Aunt May.jpg" alt="Aunt May">
+                    <div class="carousel-info">
+                        <h3>Aunt May</h3>
+                        <p>Spider-Man's beloved aunt, offering wisdom and support while unaware of his superhero
+                            identity.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/ancient one.avif" alt="ancient one">
+                    <div class="carousel-info">
+                        <h3>Ancient One</h3>
+                        <p> The Sorcerer Supreme who protected Earth from mystical threats with profound knowledge and
+                            magical abilities.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/Jane Foster.webp" alt="Jane Foster">
+                    <div class="carousel-info">
+                        <h3>Jane Foster</h3>
+                        <p>Astrophysicist who becomes Thor's love interest and occasionally wields Mjölnir herself.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/Odin.jpg" alt="Odin">
+                    <div class="carousel-info">
+                        <h3>Odin</h3>
+                        <p>All-Father of Asgard, ruler of the gods, and Thor’s father with vast power and wisdom.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/Valkyrie.webp" alt="Valkyrie">
+                    <div class="carousel-info">
+                        <h3>Valkyrie</h3>
+                        <p>Fierce Asgardian warrior, skilled in combat and leader of the Valkyrior, known for her
+                            strength and honor.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/Heimdall.webp" alt="Heimdall">
+                    <div class="carousel-info">
+                        <h3>Heimdall</h3>
+                        <p>Guardian of the Bifrost with all-seeing vision, protecting the realm of Asgard and its
+                            connections.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="/images/shuri.webp" alt="Shuri">
+                    <div class="carousel-info">
+                        <h3>Shuri</h3>
+                        <p>Brilliant scientist and princess of Wakanda, known for her technological innovations and
+                            leadership.</p>
+                    </div>
+                </div>
+                <!-- Add more character items as needed -->
+            </div>
+            <button class="carousel-btn right-btn" onclick="moveCarousel('other-carousel', 1)">&#10095;</button>
+        </div>
+    </section>
+
+    <script src="/JS/scripts.js"></script>
+</body>
+
+</html>

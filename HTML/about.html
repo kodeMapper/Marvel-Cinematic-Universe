@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Marvel</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <style>
+        body {
+            background-attachment: fixed;
+            background-image: linear-gradient(red, rgba(139, 9, 93, 0.879), rgb(0, 0, 0));
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .about-container h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            color: #e62429;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about-container .profile-image {
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .about-container .profile-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 50%;
+        }
+
+        .about-container .animated-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #e62429;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .about-container .animated-button:hover {
+            background: #c91423;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">Marvel</div>
+        <ul class="navbar-menu">
+            <li><a href="/HTML/index.html">Home</a></li>
+            <li><a href="/HTML/characters.html">Characters</a></li>
+            <li><a href="/HTML/movies.html">Movies</a></li>
+            <li><a href="/HTML/about.html">About me</a></li>
+            <li><a href="/HTML/contact.html">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-container">
+        <div class="profile-image">
+            <img src="/images/Professional.png" alt="Profile Image">
+        </div>
+        <h2>About Me</h2>
+        <p>Hello! I'm Sarang Gade, a passionate BTech student with a keen interest in innovation, particularly in the semiconductor and agriculture industries. I strive to make coding and electronics easy to understand and engaging through various tips and tricks. My mission is to bring about revolutionary changes in these fields.</p>
+        <p>Feel free to explore my work and get in touch if you have any questions or ideas to share. I'm always excited to collaborate and learn more!</p>
+        <a href="/HTML/contact.html" class="animated-button">Contact Me</a>
+    </section>
+</body>
+
+</html>

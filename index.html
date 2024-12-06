@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Cinematic Universe</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <style>
+        /* Basic reset and global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            background: url("/images/marvel_bg.jpg") no-repeat center center fixed;
+            background-size: cover;
+            border-image: fill 0 linear-gradient(#0001, #610000);
+            background-repeat: no-repeat;
+        }
+
+        /* Navigation Bar styling */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e62429;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar-menu li {
+            display: inline;
+        }
+
+        .navbar-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            color: #e62429;
+        }
+
+        /* Hero Section styling */
+        .hero-section {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar-menu li {
+                margin-bottom: 10px;
+            }
+
+            .hero-section h1 {
+                font-size: 28px;
+            }
+
+            .hero-section p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-menu {
+                padding: 0;
+            }
+
+            .navbar-menu li {
+                margin-bottom: 5px;
+            }
+
+            .hero-section {
+                padding: 10px;
+            }
+
+            .hero-section h1 {
+                font-size: 24px;
+            }
+
+            .hero-section p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-logo">Marvel</div>
+        <ul class="navbar-menu">
+            <li><a href="/HTML/index.html">Home</a></li>
+            <li><a href="/HTML/characters.html">Characters</a></li>
+            <li><a href="/HTML/movies.html">Movies</a></li>
+            <li><a href="/HTML/about.html">About me</a></li>
+            <li><a href="/HTML/contact.html">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="hero-section">
+        <h1>Welcome to the Marvel Cinematic Universe</h1>
+        <p>Explore the universe of superheroes, villains, and other amazing characters.</p>
+        <p>Learn about the movies and the stories behind them.</p>
+    </section>
+</body>
+
+</html>
