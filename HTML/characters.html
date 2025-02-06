@@ -162,6 +162,38 @@
                 font-size: 12px;
             }
         }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+            background-color: rgba(20, 20, 20, 0.9);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: auto;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 0, 0, 0.5);
+        }
+        th {
+            background-color: #b30000;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        tr:nth-child(even) {
+            background-color: rgba(255, 0, 0, 0.2);
+        }
+        tr:nth-child(odd) {
+            background-color: rgba(50, 50, 50, 0.5);
+        }
+        tr:hover {
+            background-color: rgba(255, 0, 0, 0.4);
+            transition: 0.3s ease-in-out;
+        }
     </style>
 </head>
 
@@ -170,7 +202,7 @@
     <nav class="navbar">
         <div class="navbar-logo">Marvel</div>
         <ul class="navbar-menu">
-            <li><a href="/HTML/index.html">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li><a href="/HTML/characters.html">Characters</a></li>
             <li><a href="/HTML/movies.html">Movies</a></li>
 
@@ -233,7 +265,43 @@
             <button class="carousel-btn right-btn" onclick="moveCarousel('hero-carousel', 1)">&#10095;</button>
         </div>
     </section>
-
+    <table>
+        <thead>
+            <tr>
+                <th>Character</th>
+                <th>Known as</th>
+                <th>Power Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Iron Man</td>
+                <td>Tony Stark</td>
+                <td>85%</td>
+            </tr>
+            <tr>
+                <td>Thor</td>
+                <td>God of Thunder</td>
+                <td>99%</td>
+            </tr>
+            <tr>
+                <td>Hulk</td>
+                <td>Bruce Banner</td>
+                <td>95%</td>
+            </tr>
+            <tr>
+                <td>Doctor Strange</td>
+                <td>Sorcerer Supreme</td>
+                <td>98%</td>
+            </tr>
+            <tr>
+                <td>Captain America</td>
+                <td>Steve Rogers</td>
+                <td>90%</td>
+            </tr>
+        </tbody>
+    </table>
+    
     <!-- Villains Carousel -->
     <section class="carousel-container" id="villain">
         <h2>Villains</h2>
@@ -288,6 +356,43 @@
             <button class="carousel-btn right-btn" onclick="moveCarousel('villain-carousel', 1)">&#10095;</button>
         </div>
     </section>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Villain</th>
+                <th>Alias</th>
+                <th>Threat Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Thanos</td>
+                <td>The Mad Titan</td>
+                <td>100%</td>
+            </tr>
+            <tr>
+                <td>Loki</td>
+                <td>God of Mischief</td>
+                <td>85%</td>
+            </tr>
+            <tr>
+                <td>Ultron</td>
+                <td>AI Destroyer</td>
+                <td>90%</td>
+            </tr>
+            <tr>
+                <td>Red Skull</td>
+                <td>Hydra Leader</td>
+                <td>80%</td>
+            </tr>
+            <tr>
+                <td>Hela</td>
+                <td>Goddess of Death</td>
+                <td>95%</td>
+            </tr>
+        </tbody>
+    </table>
 
     <!-- Other Characters Carousel -->
     <section class="carousel-container" id="other">
@@ -370,6 +475,44 @@
             <button class="carousel-btn right-btn" onclick="moveCarousel('other-carousel', 1)">&#10095;</button>
         </div>
     </section>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Character</th>
+                <th>Alias</th>
+                <th>Influence Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nick Fury</td>
+                <td>Director of S.H.I.E.L.D</td>
+                <td>95%</td>
+            </tr>
+            <tr>
+                <td>Deadpool</td>
+                <td>Merc with a Mouth</td>
+                <td>90%</td>
+            </tr>
+            <tr>
+                <td>Silver Surfer</td>
+                <td>Herald of Galactus</td>
+                <td>98%</td>
+            </tr>
+            <tr>
+                <td>Venom</td>
+                <td>Symbiote</td>
+                <td>88%</td>
+            </tr>
+            <tr>
+                <td>The Watcher</td>
+                <td>Uatu</td>
+                <td>100%</td>
+            </tr>
+        </tbody>
+    </table>
+
 
     <script src="/JS/scripts.js"></script>
 </body>

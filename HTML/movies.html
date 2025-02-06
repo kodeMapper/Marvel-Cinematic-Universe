@@ -7,9 +7,68 @@
     <title>MCU Movies</title>
     <link rel="stylesheet" href="/CSS/styles.css">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             background-attachment: fixed;
             background-image: linear-gradient(red, rgba(139, 9, 93, 0.879), rgb(0, 0, 0));
+        }
+
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #00bfff;
+            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 15px;
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            margin-bottom: 100px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: 3px solid rgba(0, 191, 255, 0.7);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
+            border: 3px solid rgba(255, 255, 255, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .movies-section {
+            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -19,7 +78,7 @@
     <nav class="navbar">
         <div class="navbar-logo">Marvel</div>
         <ul class="navbar-menu">
-            <li><a href="/HTML/index.html">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li><a href="/HTML/characters.html">Characters</a></li>
             <li><a href="/HTML/movies.html">Movies</a></li>
         </ul>
@@ -91,7 +150,24 @@
 
         <!-- Add more movies as needed -->
 
+
     </section>
+
+    <hr>
+
+    <h1>MCU Photo Gallery</h1>
+
+    <div class="gallery">
+        <img src="/images/iron man 1.jpg" alt="Iron Man">
+        <img src="/images/hulk_movie.jpg" alt="Captain America">
+        <img src="/images/the avengers.jpg" alt="Thor">
+        <img src="/images/age of ultron.jpg" alt="Hulk">
+        <img src="/images/infinity war.jpg" alt="Black Widow">
+        <img src="/images/end game.png" alt="Doctor Strange">
+        <img src="/images/age of ultron.jpg" alt="Spider-Man">
+        <img src="/images/iron man 1.jpg" alt="Black Panther">
+        <img src="/images/infinity war.jpg" alt="Black Widow">
+    </div>
 </body>
 
 </html>
